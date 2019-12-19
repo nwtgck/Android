@@ -42,7 +42,7 @@ class VariantManagerTest {
     @Test
     fun conceptTestControlGroupVariantActive() {
         val variant = variants.firstOrNull { it.key == "mc" }
-        assertEqualsDouble(1.0, variant!!.weight)
+        assertEqualsDouble(0.0, variant!!.weight)
         assertEquals(0, variant.features.size)
     }
 
@@ -55,7 +55,7 @@ class VariantManagerTest {
     @Test
     fun conceptTestExistingNoCtaExperimentVariantActive() {
         val variant = variants.firstOrNull { it.key == "md" }
-        assertEqualsDouble(1.0, variant!!.weight)
+        assertEqualsDouble(10.0, variant!!.weight)
     }
 
     @Test
@@ -68,7 +68,7 @@ class VariantManagerTest {
     @Test
     fun conceptTestExperimentVariantActive() {
         val variant = variants.firstOrNull { it.key == "me" }
-        assertEqualsDouble(1.0, variant!!.weight)
+        assertEqualsDouble(0.0, variant!!.weight)
     }
 
     @Test
