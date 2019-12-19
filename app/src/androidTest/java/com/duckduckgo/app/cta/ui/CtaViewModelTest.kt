@@ -416,7 +416,7 @@ class CtaViewModelTest {
         whenever(mockVariantManager.getVariant()).thenReturn(
             Variant(
                 "test",
-                features = listOf(VariantManager.VariantFeature.ConceptTest),
+                features = listOf(VariantManager.VariantFeature.OldConceptTest),
                 filterBy = { true })
         )
     }

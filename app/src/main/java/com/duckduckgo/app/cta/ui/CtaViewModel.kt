@@ -187,7 +187,7 @@ class CtaViewModel @Inject constructor(
         return null
     }
 
-    private fun isFromConceptTestVariant(): Boolean = variantManager.getVariant().hasFeature(VariantManager.VariantFeature.ConceptTest)
+    private fun isFromConceptTestVariant(): Boolean = variantManager.getVariant().hasFeature(VariantManager.VariantFeature.OldConceptTest)
 
     private fun isFromNoCtaVariant(): Boolean = variantManager.getVariant().hasFeature(VariantManager.VariantFeature.ExistingNoCta)
 

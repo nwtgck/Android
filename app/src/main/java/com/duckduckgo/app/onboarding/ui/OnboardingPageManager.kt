@@ -49,7 +49,7 @@ class OnboardingPageManagerWithTrackerBlocking(
     override fun buildPageBlueprints() {
         pages.clear()
 
-        if (variantManager.getVariant().hasFeature(VariantManager.VariantFeature.ConceptTest)) {
+        if (variantManager.getVariant().hasFeature(VariantManager.VariantFeature.OldConceptTest)) {
             pages.add(WelcomeBlueprint())
         } else {
             pages.add(SummaryPageBlueprint())
@@ -85,7 +85,7 @@ class OnboardingPageManagerWithTrackerBlocking(
     private fun shouldShowDefaultBrowserPage(): Boolean {
         return defaultWebBrowserCapability.deviceSupportsDefaultBrowserConfiguration()
                 && !variantManager.getVariant().hasFeature(VariantManager.VariantFeature.ExistingNoCta)
-                && !variantManager.getVariant().hasFeature(VariantManager.VariantFeature.ConceptTest)
+                && !variantManager.getVariant().hasFeature(VariantManager.VariantFeature.OldConceptTest)
     }
 
     private fun isFinalPage(position: Int) = position == pageCount() - 1

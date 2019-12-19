@@ -75,7 +75,7 @@ class VariantManagerTest {
     fun conceptTestExperimentVariantHasExperimentalExistingNoCta() {
         val variant = variants.firstOrNull { it.key == "me" }
         assertEquals(1, variant!!.features.size)
-        assertTrue(variant.hasFeature(VariantManager.VariantFeature.ConceptTest))
+        assertTrue(variant.hasFeature(VariantManager.VariantFeature.OldConceptTest))
     }
 
     @Suppress("SameParameterValue")

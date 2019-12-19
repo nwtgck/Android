@@ -63,7 +63,7 @@ class LaunchActivity : DuckDuckGoActivity() {
     }
 
     private fun showOnboarding() {
-        if (variantManager.getVariant().hasFeature(VariantManager.VariantFeature.ConceptTest)) {
+        if (variantManager.getVariant().hasFeature(VariantManager.VariantFeature.OldConceptTest)) {
             startActivity(OnboardingActivityExperiment.intent(this))
         } else {
             startActivity(OnboardingActivity.intent(this))

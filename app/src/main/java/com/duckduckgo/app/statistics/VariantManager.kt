@@ -28,7 +28,7 @@ interface VariantManager {
 
     sealed class VariantFeature {
         // variant-dependant features listed here
-        object ConceptTest : VariantFeature()
+        object OldConceptTest : VariantFeature()
 
         object ExistingNoCta : VariantFeature()
     }
@@ -44,9 +44,9 @@ interface VariantManager {
             // the future if we can filter by app version
             Variant(key = "sc", weight = 0.0, features = emptyList(), filterBy = { noFilter() }),
             Variant(key = "se", weight = 0.0, features = emptyList(), filterBy = { noFilter() }),
-            Variant(key = "mc", weight = 1.0, features = emptyList(), filterBy = { isEnglishLocale() }),
-            Variant(key = "me", weight = 1.0, features = listOf(VariantFeature.ConceptTest), filterBy = { isEnglishLocale() }),
-            Variant(key = "md", weight = 1.0, features = listOf(VariantFeature.ExistingNoCta), filterBy = { isEnglishLocale() })
+            Variant(key = "mc", weight = 0.0, features = emptyList(), filterBy = { isEnglishLocale() }),
+            Variant(key = "me", weight = 0.0, features = listOf(VariantFeature.OldConceptTest), filterBy = { isEnglishLocale() }),
+            Variant(key = "md", weight = 0.0, features = listOf(VariantFeature.ExistingNoCta), filterBy = { isEnglishLocale() })
 
             // All groups in an experiment (control and variants) MUST use the same filters
         )

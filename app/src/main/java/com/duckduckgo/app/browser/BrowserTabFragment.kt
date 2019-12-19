@@ -1163,7 +1163,7 @@ class BrowserTabFragment : Fragment(), FindListener, CoroutineScope {
                     progress = viewState.progress
                 }
 
-                if (variantManager.getVariant().hasFeature(VariantManager.VariantFeature.ConceptTest)) {
+                if (variantManager.getVariant().hasFeature(VariantManager.VariantFeature.OldConceptTest)) {
 
                     if (lastSeenOmnibarViewState?.isEditing == true) {
                         cancelAllAnimations()

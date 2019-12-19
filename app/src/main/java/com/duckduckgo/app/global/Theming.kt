@@ -36,7 +36,7 @@ object Theming {
 
     fun initializeTheme(settingsDataStore: SettingsDataStore, variantManager: VariantManager) {
         if (settingsDataStore.theme == null) {
-            if (variantManager.getVariant().hasFeature(VariantManager.VariantFeature.ConceptTest)) {
+            if (variantManager.getVariant().hasFeature(VariantManager.VariantFeature.OldConceptTest)) {
                 settingsDataStore.theme = DuckDuckGoTheme.LIGHT
             } else {
                 settingsDataStore.theme = DuckDuckGoTheme.DARK
